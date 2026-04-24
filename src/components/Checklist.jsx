@@ -13,9 +13,12 @@ const labels = {
 
 function Checklist({ checklist, onToggle, checklistScore }) {
   return (
-    <section className="card">
+    <section className="card checklist-card">
       <h2>Pre-Trade Checklist</h2>
       <p className="small-text">Checklist score: {checklistScore.toFixed(0)}%</p>
+      <div className="progress-track" aria-hidden>
+        <div className="progress-value" style={{ width: `${checklistScore}%` }} />
+      </div>
       <div className="checklist-grid">
         {checklistFieldKeys.map((key) => (
           <label key={key} className="check-item">

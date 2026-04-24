@@ -12,7 +12,9 @@ function StatsCards({ stats }) {
 
   return (
     <section className="card">
-      <h2>Journal Stats</h2>
+      <div className="section-head">
+        <h2>Performance Metrics</h2>
+      </div>
       <div className="stats-grid">
         {items.map(([label, value]) => (
           <article key={label} className="stat-card">

@@ -1,11 +1,11 @@
 function Header() {
   return (
     <header className="header card">
-      <div>
+      <div className="header-title">
         <p className="brand">Unbound Finance</p>
-        <h1>TradePlan Lite</h1>
+        <h1>Trader Dashboard</h1>
       </div>
-      <p className="subtitle">Plan your trade before the market tests your discipline.</p>
+      <p className="subtitle">Plan every position before the market tests your discipline.</p>
     </header>
   );
 }
