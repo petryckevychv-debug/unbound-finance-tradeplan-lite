@@ -9,7 +9,7 @@ function TradeForm({ formState, onChange, onSave, onReset, editingId }) {
   ];
 
   return (
-    <section className="card">
+    <section className="card form-card">
       <h2>{editingId ? 'Edit Trade' : 'Trade Form'}</h2>
       <div className="form-grid">
         <label>

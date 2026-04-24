@@ -1,7 +1,9 @@
 function RiskCalculator({ riskPreview }) {
   return (
     <section className="card">
-      <h2>Risk Calculator</h2>
+      <div className="section-head">
+        <h2>Risk Calculator</h2>
+      </div>
       <div className="metrics-grid">
         <div>
           <p className="metric-label">Risk Amount</p>

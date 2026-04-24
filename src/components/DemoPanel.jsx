@@ -1,7 +1,8 @@
 function DemoPanel({ onLoadDemo, onExportCSV, onExportJSON, onClearAll }) {
   return (
     <section className="card">
-      <h2>Export & Demo Controls</h2>
+      <h2>Quick Actions</h2>
+      <p className="small-text">Load sample data and export your journal without changing workflow.</p>
       <div className="button-row">
         <button className="btn" onClick={onLoadDemo}>
           Load Demo

@@ -1,7 +1,9 @@
 function TradesTable({ trades, onDelete, onEdit, onMarkClosed }) {
   return (
     <section className="card">
-      <h2>Trades Journal</h2>
+      <div className="section-head">
+        <h2>Recent Trades</h2>
+      </div>
       <div className="table-wrap">
         <table>
           <thead>
@@ -25,7 +27,9 @@ function TradesTable({ trades, onDelete, onEdit, onMarkClosed }) {
               <tr key={trade.id}>
                 <td>{trade.pair}</td>
                 <td className={trade.direction === 'long' ? 'text-good' : 'text-risk'}>{trade.direction}</td>
-                <td>{trade.status}</td>
+                <td>
+                  <span className={`status-pill ${trade.status}`}>{trade.status}</span>
+                </td>
                 <td>{Number(trade.entry).toFixed(4)}</td>
                 <td>{Number(trade.stopLoss).toFixed(4)}</td>
                 <td>{Number(trade.takeProfit1).toFixed(4)}</td>

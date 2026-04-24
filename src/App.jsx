@@ -266,53 +266,70 @@ function App() {
 
   return (
     <div className="app-shell">
-      <Header />
+      <aside className="side-nav card">
+        <div className="brand-mark">
+          <span className="brand-logo">◈</span>
+          <div>
+            <p className="brand">Unbound Finance</p>
+            <p className="small-text">TradePlan Lite</p>
+          </div>
+        </div>
+        <nav className="nav-menu">
+          {['Dashboard', 'Trades', 'Journal', 'Analytics', 'Risk Calculator', 'Checklist', 'Settings'].map((item) => (
+            <button key={item} className={`nav-item ${item === 'Dashboard' ? 'active' : ''}`} type="button">
+              {item}
+            </button>
+          ))}
+        </nav>
+      </aside>
 
-      <section className="card hero">
-        <h2>Unbound Finance TradePlan Lite</h2>
-        <p>
-          A lightweight trading journal and risk calculator for crypto traders who want to trade with a plan,
-          not with emotions.
-        </p>
-      </section>
+      <main className="dashboard-main">
+        <Header />
 
-      <div className="two-col">
-        <RiskCalculator riskPreview={riskPreview} />
-        <Checklist checklist={checklist} onToggle={handleChecklistToggle} checklistScore={checklistScore} />
-      </div>
+        <section className="card hero">
+          <h2>Dashboard</h2>
+          <p>Overview of your trading discipline, risk controls, and execution quality.</p>
+        </section>
 
-      <TradeForm
-        formState={formState}
-        onChange={handleFieldChange}
-        onSave={handleSaveTrade}
-        onReset={resetForm}
-        editingId={editingId}
-      />
+        <StatsCards stats={stats} />
 
-      <StatsCards stats={stats} />
+        <div className="two-col">
+          <RiskCalculator riskPreview={riskPreview} />
+          <Checklist checklist={checklist} onToggle={handleChecklistToggle} checklistScore={checklistScore} />
+        </div>
 
-      {trades.length ? (
-        <TradesTable
-          trades={trades}
-          onDelete={handleDeleteTrade}
-          onEdit={handleEditTrade}
-          onMarkClosed={handleMarkClosed}
-        />
-      ) : (
-        <EmptyState />
-      )}
+        {trades.length ? (
+          <TradesTable
+            trades={trades}
+            onDelete={handleDeleteTrade}
+            onEdit={handleEditTrade}
+            onMarkClosed={handleMarkClosed}
+          />
+        ) : (
+          <EmptyState />
+        )}
 
-      <DemoPanel
-        onLoadDemo={handleLoadDemo}
-        onExportCSV={handleExportCSV}
-        onExportJSON={handleExportJSON}
-        onClearAll={handleClearAll}
-      />
+        <div className="two-col split-wide">
+          <TradeForm
+            formState={formState}
+            onChange={handleFieldChange}
+            onSave={handleSaveTrade}
+            onReset={resetForm}
+            editingId={editingId}
+          />
+          <DemoPanel
+            onLoadDemo={handleLoadDemo}
+            onExportCSV={handleExportCSV}
+            onExportJSON={handleExportJSON}
+            onClearAll={handleClearAll}
+          />
+        </div>
 
-      <footer className="footer">
-        Unbound Finance TradePlan Lite is not financial advice. It does not provide trading signals or profit
-        guarantees. Use it as a planning and journaling tool.
-      </footer>
+        <footer className="footer">
+          Unbound Finance TradePlan Lite is not financial advice. It does not provide trading signals or profit
+          guarantees. Use it as a planning and journaling tool.
+        </footer>
+      </main>
 
       <Toast toast={toast} />
     </div>
