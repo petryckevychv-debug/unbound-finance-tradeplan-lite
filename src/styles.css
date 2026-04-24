@@ -1,0 +1,268 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color-scheme: dark;
+  background: #080b12;
+  color: #e9eef8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top right, #12243e 0%, #080b12 46%);
+}
+
+.app-shell {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 14px;
+  display: grid;
+  gap: 12px;
+}
+
+.card {
+  background: linear-gradient(180deg, rgba(18, 30, 49, 0.9) 0%, rgba(12, 18, 29, 0.95) 100%);
+  border: 1px solid rgba(127, 148, 178, 0.2);
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+}
+
+.brand {
+  margin: 0;
+  color: #8ec8ff;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.2rem;
+}
+
+.subtitle {
+  color: #b5c4d9;
+  font-size: 0.92rem;
+}
+
+.hero h2 {
+  font-size: 1.35rem;
+  margin-bottom: 4px;
+}
+
+.hero p,
+.small-text {
+  color: #bfd0e8;
+  font-size: 0.92rem;
+}
+
+.two-col {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.metrics-grid,
+.stats-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+}
+
+.stat-card {
+  background: rgba(10, 18, 31, 0.6);
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid rgba(117, 145, 182, 0.18);
+}
+
+.metric-label {
+  color: #94aaca;
+  font-size: 0.78rem;
+}
+
+.metric-value {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #dbf3ff;
+}
+
+.form-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+label {
+  display: grid;
+  gap: 4px;
+  font-size: 0.83rem;
+  color: #abc0de;
+  margin-bottom: 8px;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid rgba(130, 159, 190, 0.24);
+  border-radius: 8px;
+  background: rgba(6, 11, 19, 0.8);
+  color: #f3f8ff;
+  padding: 8px;
+}
+
+.checklist-grid {
+  margin-top: 10px;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(131, 161, 196, 0.2);
+  background: rgba(8, 14, 24, 0.72);
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.btn {
+  border: 1px solid rgba(124, 156, 194, 0.3);
+  color: #dff0ff;
+  background: rgba(21, 43, 73, 0.86);
+  border-radius: 8px;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  filter: brightness(1.08);
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #1f73ff 0%, #16a5bb 100%);
+  border: none;
+}
+
+.btn-secondary {
+  background: #1f7a5a;
+  border: none;
+}
+
+.btn-danger {
+  background: #88253b;
+  border: none;
+}
+
+.btn-xs {
+  font-size: 0.72rem;
+  padding: 6px 8px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  margin-top: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 980px;
+}
+
+th,
+td {
+  text-align: left;
+  border-bottom: 1px solid rgba(143, 168, 198, 0.15);
+  padding: 8px;
+  font-size: 0.8rem;
+}
+
+.table-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.text-good {
+  color: #49e3a2;
+}
+
+.text-risk {
+  color: #ff7c90;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 24px;
+}
+
+.footer {
+  color: #8ea2bf;
+  font-size: 0.76rem;
+  text-align: center;
+  padding: 8px 2px 10px;
+}
+
+.toast {
+  position: fixed;
+  right: 12px;
+  bottom: 12px;
+  border-radius: 10px;
+  padding: 10px 12px;
+  border: 1px solid rgba(130, 160, 190, 0.4);
+  background: rgba(13, 30, 50, 0.94);
+  z-index: 100;
+}
+
+.toast.error {
+  background: rgba(104, 21, 39, 0.95);
+}
+
+@media (max-width: 860px) {
+  .two-col,
+  .form-grid,
+  .checklist-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
